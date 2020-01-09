@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# 替换系统用户
+# 在这里注册后，其它models可通过get_user_model获得用户类
 AUTH_USER_MODEL = 'users.UserProfile'
 
 # Application definition
@@ -41,11 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.users.apps.UsersConfig',
-    'users',
-    'goods',
-    'trade',
-    'user_operation',
+    'goods.apps.GoodsConfig',
+    'trade.apps.TradeConfig',
+    'user_operation.apps.UserOperationConfig',
     'DjangoUeditor',
+    'crispy_forms',
+    'xadmin'
 ]
 
 MIDDLEWARE = [
@@ -117,15 +118,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
+LANGUAGE_CODE = 'zh-hans'
+TIME_ZONE = 'Asia/Shanghai'
 USE_I18N = True
-
 USE_L10N = True
-
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
