@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c04a8dd6-8963-4142-a5b8-76f874fc89d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/goods/views_base.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MxShop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MxShop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/goods/views_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/views_base.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +145,7 @@
       <workItem from="1578816498913" duration="1825000" />
       <workItem from="1579005396514" duration="18000" />
       <workItem from="1579005438316" duration="167000" />
-      <workItem from="1579005744854" duration="2914000" />
+      <workItem from="1579005744854" duration="4636000" />
     </task>
     <task id="LOCAL-00001" summary="DjangoUeditor中config.json注释有报错未解决">
       <created>1578487833219</created>
@@ -190,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578817718099</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="使用django的view实现json展示">
+      <created>1579008927699</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1579008927699</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,17 +222,18 @@
     <MESSAGE value="xadmin已配置完成" />
     <MESSAGE value="完成数据导入" />
     <MESSAGE value="urls.py修复图片不能显示bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="urls.py修复图片不能显示bug" />
+    <MESSAGE value="使用django的view实现json展示" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用django的view实现json展示" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="7" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579006308146">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="233" y="7" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1579006308146" />
-    <state x="221" y="29" width="848" height="559" key="CommitChangelistDialog2" timestamp="1579008873728">
+    <state x="221" y="29" width="848" height="559" key="CommitChangelistDialog2" timestamp="1579010709143">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="221" y="29" width="848" height="559" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1579008873728" />
+    <state x="221" y="29" width="848" height="559" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1579010709143" />
     <state x="216" y="209" width="611" height="207" key="Github.ShareDialog" timestamp="1578487241831">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -255,10 +262,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="5" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1579006644712" />
-    <state x="199" y="75" key="Vcs.Push.Dialog.v2" timestamp="1578817725890">
+    <state x="199" y="75" key="Vcs.Push.Dialog.v2" timestamp="1579009465914">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="199" y="75" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1578817725890" />
+    <state x="199" y="75" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1579009465914" />
     <state x="336" y="173" key="com.intellij.ide.util.TipDialog" timestamp="1579005441941">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
