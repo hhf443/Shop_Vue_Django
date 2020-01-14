@@ -20,8 +20,10 @@ from django.views.static import serve
 from MxShop.settings import MEDIA_ROOT
 
 import xadmin
+from goods.views_base import GoodsListView
 urlpatterns = [
        path('xadmin/', xadmin.site.urls),
        # path('media/(?P<path>.*)$', serve, {"document_root":MEDIA_ROOT}),
        re_path(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
+       path('goods/', GoodsListView.as_view(), name='goods-list')
 ]
