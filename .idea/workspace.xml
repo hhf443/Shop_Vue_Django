@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c04a8dd6-8963-4142-a5b8-76f874fc89d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/goods/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/goods/views_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/views_base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MxShop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MxShop/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MxShop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MxShop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/goods/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/goods/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extra_apps/xadmin/views/website.py" beforeDir="false" afterPath="$PROJECT_DIR$/extra_apps/xadmin/views/website.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +65,27 @@
       <recent name="C:\Users\h\DjangoWeb\MxShop\apps\user_operation" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.import_goods_data">
+  <component name="RunManager" selected="Django tests.Test: MxShop">
+    <configuration name="Test: MxShop" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="MxShop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="MxShop" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="import_category_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="MxShop" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -106,6 +132,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Django tests.Test: MxShop" />
         <item itemvalue="Python.import_goods_data" />
         <item itemvalue="Python.import_category_data" />
       </list>
@@ -145,7 +172,8 @@
       <workItem from="1578816498913" duration="1825000" />
       <workItem from="1579005396514" duration="18000" />
       <workItem from="1579005438316" duration="167000" />
-      <workItem from="1579005744854" duration="4636000" />
+      <workItem from="1579005744854" duration="5133000" />
+      <workItem from="1579049280606" duration="4309000" />
     </task>
     <task id="LOCAL-00001" summary="DjangoUeditor中config.json注释有报错未解决">
       <created>1578487833219</created>
@@ -196,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579008927699</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="使用django的HttpResponse, JsonResponse进行传递json数据的三种方式">
+      <created>1579010754856</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1579010754856</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,13 +258,14 @@
     <MESSAGE value="完成数据导入" />
     <MESSAGE value="urls.py修复图片不能显示bug" />
     <MESSAGE value="使用django的view实现json展示" />
-    <option name="LAST_COMMIT_MESSAGE" value="使用django的view实现json展示" />
+    <MESSAGE value="使用django的HttpResponse, JsonResponse进行传递json数据的三种方式" />
+    <option name="LAST_COMMIT_MESSAGE" value="使用django的HttpResponse, JsonResponse进行传递json数据的三种方式" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="7" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579006308146">
+    <state x="191" y="7" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1579050530227">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="7" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1579006308146" />
+    <state x="191" y="7" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1579050530227" />
     <state x="221" y="29" width="848" height="559" key="CommitChangelistDialog2" timestamp="1579010709143">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -242,30 +278,30 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="375" y="54" key="Github.UntrackedFilesDialog/0.0.1280.689@0.0.1280.689" timestamp="1578487306393" />
-    <state width="1237" height="125" key="GridCell.Tab.0.bottom" timestamp="1578561455473">
+    <state width="1237" height="166" key="GridCell.Tab.0.bottom" timestamp="1579050559943">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="125" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1578561455473" />
-    <state width="1237" height="125" key="GridCell.Tab.0.center" timestamp="1578561455473">
+    <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1579050559943" />
+    <state width="1237" height="166" key="GridCell.Tab.0.center" timestamp="1579050559943">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="125" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1578561455473" />
-    <state width="1237" height="125" key="GridCell.Tab.0.left" timestamp="1578561455473">
+    <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1579050559943" />
+    <state width="1237" height="166" key="GridCell.Tab.0.left" timestamp="1579050559943">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="125" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1578561455473" />
-    <state width="1237" height="125" key="GridCell.Tab.0.right" timestamp="1578561455473">
+    <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1579050559943" />
+    <state width="1237" height="166" key="GridCell.Tab.0.right" timestamp="1579050559943">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="125" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1578561455473" />
+    <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1579050559943" />
     <state x="5" y="0" key="SettingsEditor" timestamp="1579006644712">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="5" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1579006644712" />
-    <state x="199" y="75" key="Vcs.Push.Dialog.v2" timestamp="1579009465914">
+    <state x="199" y="75" key="Vcs.Push.Dialog.v2" timestamp="1579010920527">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="199" y="75" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1579009465914" />
+    <state x="199" y="75" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1579010920527" />
     <state x="336" y="173" key="com.intellij.ide.util.TipDialog" timestamp="1579005441941">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -280,6 +316,7 @@
     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1579008705902" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MxShop$Test__MxShop.coverage" NAME="Test: MxShop Coverage Results" MODIFIED="1579050547196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/MxShop$import_category_data.coverage" NAME="import_category_data Coverage Results" MODIFIED="1578558553261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_tools" />
     <SUITE FILE_PATH="coverage/MxShop$import_goods_data.coverage" NAME="import_goods_data Coverage Results" MODIFIED="1578560018455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/db_tools" />
   </component>

@@ -52,7 +52,7 @@ class Goods(models.Model):
     '''
     category = models.ForeignKey(GoodsCategory, verbose_name="商品类目", on_delete=models.CASCADE)
     goods_sn = models.CharField(max_length=50, default="", verbose_name="商品唯一货号")
-    name = models.CharField(max_length=300, verbose_name="商品名")
+    name = models.CharField(max_length=300, null=True, blank=True,  verbose_name="商品名")
     click_num = models.IntegerField(default=0, verbose_name="点击数")
     sold_num = models.IntegerField(default=0, verbose_name="商品销售量")
     fav_num = models.IntegerField(default=0, verbose_name="收藏数")
@@ -73,7 +73,7 @@ class Goods(models.Model):
         verbose_name_plural = verbose_name
 
     def __str__(self):
-        return self.name
+        return self.username
 
 class GoodsImage(models.Model):
     goods = models.ForeignKey(Goods, verbose_name="商品", related_name="images", on_delete=models.CASCADE)

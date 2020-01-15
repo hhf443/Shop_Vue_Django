@@ -18,12 +18,17 @@ from django.urls import path, re_path
 from django.views.static import serve
 
 from MxShop.settings import MEDIA_ROOT
-
+from django.conf.urls import url, include
+from rest_framework.documentation import include_docs_urls
 import xadmin
 from goods.views_base import GoodsListView
+from goods.views import GoodsListView
+
 urlpatterns = [
        path('xadmin/', xadmin.site.urls),
        # path('media/(?P<path>.*)$', serve, {"document_root":MEDIA_ROOT}),
        re_path(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
-       path('goods/', GoodsListView.as_view(), name='goods-list')
+       path('goods/', GoodsListView.as_view(), name='goods-list'),
+       path('docs/', include_docs_urls(title='生鲜电商')),
+       url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
