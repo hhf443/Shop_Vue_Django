@@ -28,7 +28,7 @@ for lev1_cat in row_data:
         lev2_intance.category_type = 2
         lev2_intance.save()
 
-        for lev3_cat in lev1_cat["sub_categorys"]:
+        for lev3_cat in lev2_cat["sub_categorys"]:
             lev3_intance = GoodsCategory()  # 类对象
             lev3_intance.code = lev3_cat["code"]
             lev3_intance.name = lev3_cat["name"]

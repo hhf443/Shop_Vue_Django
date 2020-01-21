@@ -20,7 +20,8 @@ class UserProfile(AbstractUser):
 
     # 以unicode方式返回任何对象的陈述
     def __str__(self):
-        return self.name
+        # 这里用name的话，jwt验证会出错
+        return self.username
 
 class VerifyCode(models.Model):
     '''
