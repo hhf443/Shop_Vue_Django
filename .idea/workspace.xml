@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c04a8dd6-8963-4142-a5b8-76f874fc89d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/user_operation/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/users/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/utils/permissions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/utils/yunpian.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MxShop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MxShop/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MxShop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MxShop/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/goods/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/goods/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/goods/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/goods/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/user_operation/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user_operation/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/user_operation/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/user_operation/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +247,7 @@
       <workItem from="1579767536281" duration="4331000" />
       <workItem from="1579780850918" duration="1043000" />
       <workItem from="1579834862538" duration="13188000" />
-      <workItem from="1579931741178" duration="6956000" />
+      <workItem from="1579931741178" duration="8022000" />
     </task>
     <task id="LOCAL-00001" summary="DjangoUeditor中config.json注释有报错未解决">
       <created>1578487833219</created>
@@ -337,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579595340233</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="用户注册、留言、收藏功能完成">
+      <created>1579940281179</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1579940281179</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +364,8 @@
     <MESSAGE value="使用rest_framework进行json的获取和存储" />
     <MESSAGE value="genericView完成json存储" />
     <MESSAGE value="加入JWT验证机制" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入JWT验证机制" />
+    <MESSAGE value="用户注册、留言、收藏功能完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户注册、留言、收藏功能完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="7" key="#Deployment" timestamp="1579160411621">
@@ -387,10 +384,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="191" y="7" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1579160512331" />
-    <state x="221" y="29" width="848" height="559" key="CommitChangelistDialog2" timestamp="1579940234304">
+    <state x="221" y="29" width="848" height="559" key="CommitChangelistDialog2" timestamp="1579941462076">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="221" y="29" width="848" height="559" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1579940234304" />
+    <state x="221" y="29" width="848" height="559" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1579941462076" />
     <state x="216" y="209" width="611" height="207" key="Github.ShareDialog" timestamp="1578487241831">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -439,10 +436,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="5" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1579158587466" />
-    <state x="199" y="75" key="Vcs.Push.Dialog.v2" timestamp="1579595349043">
+    <state x="199" y="75" key="Vcs.Push.Dialog.v2" timestamp="1579940288136">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="199" y="75" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1579595349043" />
+    <state x="199" y="75" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1579940288136" />
     <state x="336" y="173" key="com.intellij.ide.util.TipDialog" timestamp="1579005441941">
       <screen x="0" y="0" width="1280" height="689" />
     </state>

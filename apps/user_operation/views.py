@@ -4,8 +4,8 @@ from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from rest_framework.authentication import SessionAuthentication
-from .models import UserFav, UserLeavingMessage
-from .serializers import UserFavSerializer, UserFavDetailSerializer, LeavingMessageSerializer
+from .models import UserFav, UserLeavingMessage, UserAddress
+from .serializers import UserFavSerializer, UserFavDetailSerializer, LeavingMessageSerializer, AddressSerializer
 from utils.permissions import IsOwnerOrReadOnly
 
 
@@ -72,4 +72,4 @@ class AddressViewSet(viewsets.ModelViewSet):
     authentication_classes = (JSONWebTokenAuthentication, SessionAuthentication)
 
     def get_queryset(self):
-        return UserLeavingMessage.objects.filter(user=self.request.user)
+        return UserAddress.objects.filter(user=self.request.user)
