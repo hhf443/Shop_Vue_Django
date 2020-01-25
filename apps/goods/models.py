@@ -73,7 +73,9 @@ class Goods(models.Model):
         verbose_name_plural = verbose_name
 
     def __str__(self):
-        return self.username
+        # return self.username
+        return self.name
+
 
 class GoodsImage(models.Model):
     goods = models.ForeignKey(Goods, verbose_name="商品", related_name="images", on_delete=models.CASCADE)

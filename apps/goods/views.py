@@ -15,6 +15,7 @@ from .filters import GoodsFilter
 from .models import Goods, GoodsCategory
 from .serializers import GoodsSerializer, CategorySerializer
 
+
 class GoodsPagination(PageNumberPagination):
     page_size = 12
     # 灵活设置分页
@@ -22,7 +23,10 @@ class GoodsPagination(PageNumberPagination):
     page_size_query_param = 'page_size'
     max_page_size = 100
 
-class GoodsListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
+
+
+
+class GoodsListViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     queryset = Goods.objects.all()
     serializer_class = GoodsSerializer
     pagination_class = GoodsPagination
@@ -32,6 +36,7 @@ class GoodsListViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     filter_class = GoodsFilter
     search_fields = ('name', 'goods_brief', 'goods_desc')
     ordering_fields = ('sold_num', 'shop_price')
+
 
 class CategoryViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
     '''
@@ -57,9 +62,9 @@ class CategoryViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets
 #         goods_serializer = GoodsSerializer(goods, many=True)
 #         return Response(goods_serializer.data)
 
-    # def post(self, request, format=None):
-    #     goods_serializer = GoodsSerializer(data=request.data)
-    #     if goods_serializer.is_valid():
-    #         goods_serializer.save()
-    #         return Response(goods_serializer.data, status=status.HTTP_201_CREATED)
-    #     return Response(goods_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+# def post(self, request, format=None):
+#     goods_serializer = GoodsSerializer(data=request.data)
+#     if goods_serializer.is_valid():
+#         goods_serializer.save()
+#         return Response(goods_serializer.data, status=status.HTTP_201_CREATED)
+#     return Response(goods_serializer.errors, status=status.HTTP_400_BAD_REQUEST)

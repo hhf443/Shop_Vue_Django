@@ -1,7 +1,9 @@
 from rest_framework import serializers
-from .models import Goods, GoodsCategory
+from .models import Goods, GoodsCategory, GoodsImage
 
-
+"""
+    等同django中form功能
+"""
 # 手动添加字段
 # class GoodsSerializer(serializers.Serializer):
 #     name = serializers.CharField(required=True, max_length=100)
@@ -32,9 +34,16 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class GoodsImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GoodsImage
+        fields = ('image', )
+
+
 class GoodsSerializer(serializers.ModelSerializer):
     # 显示外键的详细信息，实例化外键
     category = CategorySerializer()
+    images = GoodsImageSerializer(many=True)
 
     class Meta:
         model = Goods
