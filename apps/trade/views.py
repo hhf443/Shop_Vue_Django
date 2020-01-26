@@ -7,7 +7,7 @@ from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 from rest_framework import mixins
 # Create your views here.
 from trade.models import ShoppingCart, OrderInfo, OrderGoods
-from trade.serializers import ShopCartSerializer, ShopCartDetailSerializer, OrderSerializer
+from trade.serializers import ShopCartSerializer, ShopCartDetailSerializer, OrderSerializer, OrderDetailSerializer
 from utils.permissions import IsOwnerOrReadOnly
 
 
@@ -36,15 +36,16 @@ class ShoppingCartViewSet(viewsets.ModelViewSet):
         return ShoppingCart.objects.filter(user=self.request.user)
 
 
-class OrderViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.DestroyModelMixin, viewsets.GenericViewSet):
+class OrderViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, mixins.CreateModelMixin, mixins.DestroyModelMixin,
+                   viewsets.GenericViewSet):
     """
     订单管理
     list:
-        订单列表
-    create:
-        创建订单
+        获取个人订单
     delete:
         删除订单
+    create：
+        新增订单
     """
     permission_classes = (IsAuthenticated, IsOwnerOrReadOnly)
     authentication_classes = (JSONWebTokenAuthentication, SessionAuthentication)
@@ -52,6 +53,11 @@ class OrderViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Destro
 
     def get_queryset(self):
         return OrderInfo.objects.filter(user=self.request.user)
+
+    def get_serializer_class(self):
+        if self.action == "retrieve":
+            return OrderDetailSerializer
+        return OrderSerializer
 
     def perform_create(self, serializer):
         order = serializer.save()
@@ -62,6 +68,6 @@ class OrderViewSet(mixins.ListModelMixin, mixins.CreateModelMixin, mixins.Destro
             order_goods.goods_num = shop_cart.nums
             order_goods.order = order
             order_goods.save()
-            shop_carts.delete()
-        return order
 
+            shop_cart.delete()
+        return order

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c04a8dd6-8963-4142-a5b8-76f874fc89d9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MxShop/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MxShop/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/trade/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/trade/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/trade/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/trade/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/trade/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/trade/views.py" afterDir="false" />
     </list>
@@ -248,7 +248,8 @@
       <workItem from="1579780850918" duration="1043000" />
       <workItem from="1579834862538" duration="13188000" />
       <workItem from="1579931741178" duration="15595000" />
-      <workItem from="1580009347454" duration="3165000" />
+      <workItem from="1580009347454" duration="3256000" />
+      <workItem from="1580023508111" duration="3081000" />
     </task>
     <task id="LOCAL-00001" summary="DjangoUeditor中config.json注释有报错未解决">
       <created>1578487833219</created>
@@ -348,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580009476571</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="交易订单功能完成">
+      <created>1580015315692</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1580015315692</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -382,7 +390,8 @@
     <MESSAGE value="用户注册、留言、收藏功能完成" />
     <MESSAGE value="用户收货地址管理功能完成" />
     <MESSAGE value="购物车功能完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="购物车功能完成" />
+    <MESSAGE value="交易订单功能完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="交易订单功能完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="7" key="#Deployment" timestamp="1579160411621">
@@ -401,10 +410,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="191" y="7" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1579160512331" />
-    <state x="221" y="29" width="848" height="559" key="CommitChangelistDialog2" timestamp="1580009432175">
+    <state x="221" y="29" width="848" height="559" key="CommitChangelistDialog2" timestamp="1580026720941">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="221" y="29" width="848" height="559" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1580009432175" />
+    <state x="221" y="29" width="848" height="559" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1580026720941" />
     <state x="216" y="209" width="611" height="207" key="Github.ShareDialog" timestamp="1578487241831">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -413,38 +422,38 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="375" y="54" key="Github.UntrackedFilesDialog/0.0.1280.689@0.0.1280.689" timestamp="1578487306393" />
-    <state width="1237" height="216" key="GridCell.Tab.0.bottom" timestamp="1579953463684">
+    <state width="1237" height="201" key="GridCell.Tab.0.bottom" timestamp="1580023753966">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="216" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1579953463684" />
-    <state width="1237" height="216" key="GridCell.Tab.0.center" timestamp="1579953463683">
+    <state width="1237" height="201" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1580023753966" />
+    <state width="1237" height="201" key="GridCell.Tab.0.center" timestamp="1580023753966">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="216" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1579953463683" />
-    <state width="1237" height="216" key="GridCell.Tab.0.left" timestamp="1579953463683">
+    <state width="1237" height="201" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1580023753966" />
+    <state width="1237" height="201" key="GridCell.Tab.0.left" timestamp="1580023753966">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="216" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1579953463683" />
-    <state width="1237" height="216" key="GridCell.Tab.0.right" timestamp="1579953463683">
+    <state width="1237" height="201" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1580023753966" />
+    <state width="1237" height="201" key="GridCell.Tab.0.right" timestamp="1580023753966">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="216" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1579953463683" />
-    <state width="1237" height="201" key="GridCell.Tab.1.bottom" timestamp="1579772792870">
+    <state width="1237" height="201" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1580023753966" />
+    <state width="1237" height="201" key="GridCell.Tab.1.bottom" timestamp="1580023753966">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="201" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1579772792870" />
-    <state width="1237" height="201" key="GridCell.Tab.1.center" timestamp="1579772792870">
+    <state width="1237" height="201" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1580023753966" />
+    <state width="1237" height="201" key="GridCell.Tab.1.center" timestamp="1580023753966">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="201" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1579772792870" />
-    <state width="1237" height="201" key="GridCell.Tab.1.left" timestamp="1579772792869">
+    <state width="1237" height="201" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1580023753966" />
+    <state width="1237" height="201" key="GridCell.Tab.1.left" timestamp="1580023753966">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="201" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1579772792869" />
-    <state width="1237" height="201" key="GridCell.Tab.1.right" timestamp="1579772792870">
+    <state width="1237" height="201" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1580023753966" />
+    <state width="1237" height="201" key="GridCell.Tab.1.right" timestamp="1580023753966">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="201" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1579772792870" />
+    <state width="1237" height="201" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1580023753966" />
     <state width="218" height="477" key="HiddenNamespacesPopup" timestamp="1579158823278">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -453,10 +462,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="5" y="0" key="SettingsEditor/0.0.1280.689@0.0.1280.689" timestamp="1579943828786" />
-    <state x="199" y="75" key="Vcs.Push.Dialog.v2" timestamp="1580009514241">
+    <state x="199" y="75" key="Vcs.Push.Dialog.v2" timestamp="1580015321696">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="199" y="75" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1580009514241" />
+    <state x="199" y="75" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1580015321696" />
     <state x="336" y="173" key="com.intellij.ide.util.TipDialog" timestamp="1579005441941">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -475,7 +484,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/apps/trade/serializers.py</url>
-          <line>63</line>
+          <line>79</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

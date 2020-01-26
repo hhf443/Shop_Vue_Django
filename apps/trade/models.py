@@ -28,9 +28,9 @@ class ShoppingCart(models.Model):
 
 
 class OrderInfo(models.Model):
-    '''
+    """
     订单
-    '''
+    """
     ORDER_STATUS = (
         ("TRADE_SUCCESS", "成功"),
         ("TRADE_CLOSED", "超时关闭"),
@@ -69,7 +69,6 @@ class OrderGoods(models.Model):
     order = models.ForeignKey(OrderInfo, verbose_name="订单信息", related_name="goods", on_delete=models.CASCADE)
     goods = models.ForeignKey(Goods, verbose_name="商品", on_delete=models.CASCADE)
     goods_num = models.IntegerField(default=0, verbose_name="商品数量")
-
     add_time = models.DateTimeField(default=datetime.now, verbose_name="添加时间")
 
     class Meta:
