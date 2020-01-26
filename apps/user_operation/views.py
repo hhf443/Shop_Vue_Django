@@ -66,7 +66,7 @@ class AddressViewSet(viewsets.ModelViewSet):
             更新收货地址
         delete:
             删除收货地址
-        """
+    """
     serializer_class = AddressSerializer
     permission_classes = (IsAuthenticated, IsOwnerOrReadOnly)
     authentication_classes = (JSONWebTokenAuthentication, SessionAuthentication)

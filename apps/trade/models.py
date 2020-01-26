@@ -3,13 +3,16 @@ from django.db import models
 from django.contrib.auth import get_user_model
 
 from goods.models import Goods
+
 User = get_user_model()
+
+
 # Create your models here.
 
 class ShoppingCart(models.Model):
-    '''
+    """
     购物车
-    '''
+    """
     user = models.ForeignKey(User, verbose_name=u"用户", on_delete=models.CASCADE)
     goods = models.ForeignKey(Goods, verbose_name=u"商品", on_delete=models.CASCADE)
     nums = models.IntegerField(default=0, verbose_name=u"购买数量")
@@ -18,6 +21,7 @@ class ShoppingCart(models.Model):
     class Meta:
         verbose_name = "购物车"
         verbose_name_plural = verbose_name
+        unique_together = ('user', 'goods')
 
     def __str__(self):
         return "%s(%d)".format(self.goods.name, self.nums)
