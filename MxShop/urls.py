@@ -30,7 +30,7 @@ from goods.views import GoodsListViewSet, CategoryViewSet
 # from goods.views import GoodsListView
 from user_operation.views import UserFavViewSet, LeavingMessageViewSet, AddressViewSet
 from users.views import SmsCodeViewSet, UserViewSet
-from trade.views import ShoppingCartViewSet
+from trade.views import ShoppingCartViewSet, OrderViewSet
 
 router = DefaultRouter()
 # 配置goods的url
@@ -49,6 +49,8 @@ router.register('messages', LeavingMessageViewSet, basename='messages')
 router.register('address', AddressViewSet, basename='address')
 # 购物车url
 router.register('shopcarts', ShoppingCartViewSet, basename='shopcarts')
+# 订单
+router.register('orders', OrderViewSet, basename='orders')
 
 urlpatterns = [
        # path('media/(?P<path>.*)$', serve, {"document_root":MEDIA_ROOT}),
