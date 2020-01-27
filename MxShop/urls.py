@@ -26,8 +26,8 @@ from rest_framework_jwt.views import obtain_jwt_token
 
 import xadmin
 from goods.views_base import GoodsListView
-from goods.views import GoodsListViewSet, CategoryViewSet
 # from goods.views import GoodsListView
+from goods.views import GoodsListViewSet, CategoryViewSet, BannerViewSet, IndexCategoryViewSet
 from user_operation.views import UserFavViewSet, LeavingMessageViewSet, AddressViewSet
 from users.views import SmsCodeViewSet, UserViewSet
 from trade.views import ShoppingCartViewSet, OrderViewSet
@@ -51,6 +51,10 @@ router.register('address', AddressViewSet, basename='address')
 router.register('shopcarts', ShoppingCartViewSet, basename='shopcarts')
 # 订单
 router.register('orders', OrderViewSet, basename='orders')
+# 轮播图
+router.register('banners', BannerViewSet, basename='banners')
+# 首页商品系列数据
+router.register('indexgoods', IndexCategoryViewSet, basename='indexgoods')
 
 urlpatterns = [
        # path('media/(?P<path>.*)$', serve, {"document_root":MEDIA_ROOT}),
@@ -65,5 +69,6 @@ urlpatterns = [
        path('docs/', include_docs_urls(title='生鲜电商')),
 
        path('api-token-auth/', views.obtain_auth_token),
+
        path('login/', obtain_jwt_token)
 ]
