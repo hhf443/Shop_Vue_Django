@@ -69,12 +69,7 @@ class UserRegSerializer(serializers.ModelSerializer):
     #     return user
 
     def validate_code(self, code):
-        # try:
-        #     verify_records = VerifyCode.objects.get(mobile=self.initial_data["username"], code=code)
-        # except VerifyCode.DoesNotExist as e:
-        #     pass
-        # except VerifyCode.MultipleObjectsReturned as e:
-        #     pass
+        # initial_data:前端post的数据
         verify_records = VerifyCode.objects.filter(mobile=self.initial_data["username"]).order_by("-add_time")
         if verify_records:
             last_record = verify_records[0]
@@ -89,6 +84,7 @@ class UserRegSerializer(serializers.ModelSerializer):
         else:
             raise serializers.ValidationError("验证码错误")
 
+    # attrs： validate_code返回的值
     def validate(self, attrs):
         attrs["mobile"] = attrs["username"]
         del attrs["code"]

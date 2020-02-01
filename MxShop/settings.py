@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     'rest_framework.authtoken',
+    'social_django'
 ]
 
 MIDDLEWARE = [
@@ -79,6 +80,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
@@ -133,6 +136,10 @@ USE_TZ = False
 
 AUTHENTICATION_BACKENDS = (
     'users.views.CustomBackend',
+    'social_core.backends.weibo.WeiboOAuth2',
+    'social_core.backends.weixin.WeixinOAuth2',
+    'social_core.backends.qq.QQOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
 )
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
@@ -176,3 +183,14 @@ REGEX_MOBILE = "^1[358]\d{9}$|^147\d{8}$|^176\d{8}$"
 REST_FRAMEWORK_EXTENSIONS = {
     'DEFAULT_CACHE_RESPONSE_TIMEOUT': 60 * 15
 }
+
+SOCIAL_AUTH_WEIBO_KEY = '3393076475'
+SOCIAL_AUTH_WEIBO_SECRET = 'b5950a8c53624caa39348404c1d11f13'
+
+SOCIAL_AUTH_WEIXIN_KEY = ''
+SOCIAL_AUTH_WEIXIN_SECRET = ''
+
+SOCIAL_AUTH_QQ_KEY = ''
+SOCIAL_AUTH_QQ_SECRET = ''
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/index/'

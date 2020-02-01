@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.backends import ModelBackend
 from django.contrib.auth import get_user_model
 from django.db.models import Q
+from random import choice
 from rest_framework import status
 from rest_framework.mixins import CreateModelMixin, RetrieveModelMixin, UpdateModelMixin
 from rest_framework.viewsets import GenericViewSet
@@ -33,6 +34,14 @@ class CustomBackend(ModelBackend):
 
 class SmsCodeViewSet(CreateModelMixin, GenericViewSet):
     serializer_class = SmsSerializer
+
+    def generate_code(self):
+        seeds = "1234567890"
+        random_str = []
+        for i in range(4):
+            random_str.append(choice(seeds))
+
+        return "".join(random_str)
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)

@@ -15,7 +15,8 @@ from rest_framework_extensions.cache.mixins import CacheResponseMixin
 
 from .filters import GoodsFilter
 from .models import Goods, GoodsCategory, Banner, HotSearchWords
-from .serializers import GoodsSerializer, CategorySerializer, BannerSerializer, IndexCategorySerializer
+from .serializers import GoodsSerializer, CategorySerializer, BannerSerializer, IndexCategorySerializer, \
+    HotWordsSerializer
 
 
 class GoodsPagination(PageNumberPagination):
@@ -55,9 +56,12 @@ class CategoryViewSet(mixins.ListModelMixin, mixins.RetrieveModelMixin, viewsets
     serializer_class = CategorySerializer
 
 
-class HotViewSet(mixins.ListModelMixin, mixins.DestroyModelMixin, viewsets.GenericViewSet):
-    queryset = HotSearchWords.objects.all().order_by('index')
-    serializer_class = BannerSerializer
+class HotSearchsViewset(mixins.ListModelMixin, viewsets.GenericViewSet):
+    """
+    获取热搜词列表
+    """
+    queryset = HotSearchWords.objects.all().order_by("-index")
+    serializer_class = HotWordsSerializer
 
 
 class BannerViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):

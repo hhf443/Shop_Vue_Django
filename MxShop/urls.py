@@ -70,5 +70,8 @@ urlpatterns = [
 
        path('api-token-auth/', views.obtain_auth_token),
 
-       path('login/', obtain_jwt_token)
+       path('login_auth/', obtain_jwt_token),
+
+       # 第三方登陆
+       url('', include('social_django.urls', namespace='social'))
 ]
